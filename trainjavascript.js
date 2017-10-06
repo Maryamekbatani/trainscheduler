@@ -107,10 +107,6 @@ $("#add-train-btn").on("click", function(event) {
         var nextTrainArr = moment(nextTrainAdd).format("hh:mm");
         console.log("Arrival Time: " + nextTrainArr);
   
-
-
-
-
   // Add each train's data into the table
   $("#train-table > tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" +
   frequency  + "</td><td>" + nextTrainArr + "</td><td>"+ nextTrainMin + "</td></tr>");
