@@ -70,21 +70,18 @@ $("#add-train-btn").on("click", function(event) {
   var key = childSnapshot.key;
   var remove = "<button class='glyphicon glyphicon-trash' id=" + key + "></button>"
   
-   //code in math to find the next train time and minutes until next arrival based off of frequency value and first train time value.
+   //math to find the next train time and minutes until next arrival based off of frequency value and first train time value.
 
-        //convert first train time back a year to make sure it is set before current time before pushing to firebase.
+        //convert first train time back a year to make sure it is set before current time.
 
         var firstTrainConverted = moment(time, "hh:mm").subtract(1, "years");
         console.log(firstTrainConverted);
 
         //set a variable equal to the current time from moment.js
 
-        var currentTime = moment();
-        console.log("Current Time: " + moment(currentTime).format("hh:mm"));
+         var currentTime = moment();
+        /console.log("Current Time: " + moment(currentTime).format("hh:mm"));
 
-        //post current time to jumbotron for reference
-
-        $("#currentTime").html("Current Time: " + moment(currentTime).format("hh:mm"));
 
         //find the difference between the first train time and the current time
 
